@@ -1,9 +1,42 @@
 var React = require('react');
+var Helmet = require('react-helmet').default;
 
 class About extends React.Component {
   render() {
     return (
       <div className="jumbotron get-in-touch about">
+
+        <Helmet>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes"/>
+            <base href="/"/>
+            <meta charset="utf-8"/>
+            <title>Local Engineering and Mechanical Product Design Firm in Denver CO | Luhu Design</title>
+            <meta name="description" content="Luhu design provides physical product design and engineering services for startups and inventors and is located in Denver, Colorado."/>
+            <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico"/>
+            <link rel="canonical" href="http://www.luhudesign.com/about"/>
+            <meta property="og:site_name" content="Luhu Design, LLC"/>
+            <meta property="og:title" content="Local Engineering and Mechanical Product Design Firm in Denver CO | Luhu Design"/>
+            <meta property="og:url" content="http://www.luhudesign.com/about"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:description" content="Luhu design provides physical product design and engineering services for startups and inventors and is located in Denver, Colorado."/>
+            <meta property="og:image" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
+            <meta property="og:image:width" content="488"/>
+            <meta property="og:image:height" content="486"/>
+            <meta itemprop="name" content="Services"/>
+            <meta itemprop="url" content="http://www.luhudesign.com/about"/>
+            <meta itemprop="thumbnailUrl" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
+            <link rel="image_src" href="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
+            <meta itemprop="image" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
+            <meta name="twitter:title" content="About"/>
+            <meta name="twitter:image" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
+            <meta name="twitter:url" content="http://www.luhudesign.com/about"/>
+            <meta name="twitter:card" content="summary"/>
+
+        </Helmet>
+
+
         <div className="main">
           <div className="content-container">
             <div className="content">
@@ -33,7 +66,7 @@ class About extends React.Component {
               </div>
             <div className="callout-container">
               <div className="callout">
-                <p className="lead">Talk to us today to see how<br/>we can help solve your mechanical<br/>engineering and design challenges.</p>
+                <p className="lead">Talk to us today to see how we can help solve your mechanical engineering and design challenges.</p>
                 <div className="button-wrapper get-in-touch">
                 <a className="button get-in-touch" href="/contact" role="button"><span>Talk to us today</span></a>
                 </div>

@@ -321,7 +321,7 @@ h6 {
 
 .jumbotron.services-home .sub-heading {
   color: #262626;
-  text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+  text-shadow: 1px 1px 2px rgba(0,0,0,.1);
 }
 
 .jumbotron.feature .lead {
@@ -377,8 +377,8 @@ h6 {
 }
 
 .jumbotron.get-in-touch .callout-container {
-  padding-top: 30px;
   padding-bottom: 20px;
+
 }
 
 
@@ -580,6 +580,15 @@ h6 {
   color: #262626;
 }
 
+.categories {
+  padding-top: 0;
+  padding-bottom: 12px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 300;
+  color: #262626;
+}
+
 .blog-content blockquote {
   color: #7f7f7f;
   font-size: 20px;
@@ -593,8 +602,22 @@ h6 {
   margin-top: 30px;
 }
 
+figure {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
 
+figcaption {
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #7f7f7f;
+	color: #fff;
+}
 
+.post-component ol li {
+  margin-bottom: 10px;
+}
 
 
 .post-component .intro-header > .container {
@@ -740,7 +763,7 @@ h6 {
       rgba(38, 38, 38, 0.6),
       rgba(38, 38, 38, 0.8)
     ),
-    url(./img/electronics-chip-cropped.jpg);
+    url(./img/3d-printer.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100% top;
@@ -850,7 +873,7 @@ h6 {
   color: #fff;
   padding: 0 12px;
   text-shadow: 1px 1px 2px rgba(0,0,0,.25);
-  z-index: 4;
+  z-index: 3;
   display: flex;
   margin-top: 0;
   margin-bottom: 18px;
@@ -865,6 +888,11 @@ h6 {
 
 
 .service-list-item {
+
+
+}
+
+.image-wrapper {
   position: relative;
   width: 200px;
   height: 200px;
@@ -872,11 +900,12 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-.service-list-item:hover > h2 {
-  font-weight: 600;
+.service-list-item:hover,
+.service-list-item:focus {
+   background: transparent;
+
 }
 
 .overlay {
@@ -904,8 +933,18 @@ h6 {
 
 .overlay:hover:before,
 .overlay:focus:before {
-  background: none;
-  z-index: 0;
+  background-image:
+    linear-gradient(
+      rgba(38, 38, 38, 0.6),
+      rgba(38, 38, 38, 0.8)
+    );
+
+    z-index:3;
+}
+
+.overlay:hover > .image-wrapper > h2,
+.overlay:focus > .image-wrapper > h2 {
+    font-weight: 600;
 }
 
 
@@ -914,7 +953,6 @@ h6 {
   position: absolute;
   z-index: 2;
   left: 0;
-  opacity: 0.9;
 
 
 }
@@ -1786,6 +1824,10 @@ a.svg:after {
     font-size: 18px;
   }
 
+  .blog-content p {
+    margin-bottom: 12px;
+  }
+
   .post-component .post-meta {
     font-size: 16px;
   }
@@ -1859,9 +1901,9 @@ a.svg:after {
     /*height: 860px;*/
   }
 
-  .jumbotron .content-container .lead {
+  /*.jumbotron .content-container .lead {
     font-size: 20px;
-  }
+  }*/
 
 }
 
@@ -2047,7 +2089,7 @@ a.svg:after {
   }
 
   .back-container {
-    padding: 10px 16px;
+    padding: 12px 18px;
     color: #fff;
     font-size: 16px;
   }

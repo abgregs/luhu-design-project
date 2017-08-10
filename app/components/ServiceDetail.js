@@ -9,7 +9,7 @@ if (props.selectedService === null) {
 } else {
 
   var style = {
-  backgroundImage: `linear-gradient(rgba(38, 38, 38, 0.4),rgba(38, 38, 38, 0.6)),url(${props.selectedService.image})`,
+  backgroundImage: `linear-gradient(rgba(38, 38, 38, 0.6),rgba(38, 38, 38, 0.8)),url(${props.selectedService.image})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: '100% top'
@@ -27,10 +27,10 @@ if (props.selectedService === null) {
          <meta charset="utf-8"/>
          <title>{`${props.selectedService.metaTitle} | Luhu Design`}</title>
          <meta name="description" content={`${props.selectedService.description}`}/>
-         <link rel="shortcut icon" type="image/x-icon" href="/apps/img/favicon.ico"/>
+         <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico"/>
          <link rel="canonical" href={`http://www.luhudesign.com/services/${props.selectedService.id}`} />
          <meta property="og:site_name" content="Luhu Design, LLC"/>
-         <meta property="og:title" content="Denver Engineering and Mechanical Design Services | Luhu Design"/>
+         <meta property="og:title" content={`${props.selectedService.metaTitle} | Luhu Design`}/>
          <meta property="og:url" content={`http://www.luhudesign.com/services/${props.selectedService.id}`}/>
          <meta property="og:type" content="website"/>
          <meta property="og:description" content={`${props.selectedService.description}`}/>
@@ -71,6 +71,7 @@ if (props.selectedService === null) {
            </div>
            <p className="lead">{props.selectedService.leadOne}</p>
            <p className="lead" dangerouslySetInnerHTML={{__html: props.selectedService.leadTwo}}></p>
+           {/* <p className="lead">{props.selectedService.leadTwo}</p> */}
            <div className="callout-container">
              <div className="callout">
                <div className="button-wrapper hero">
@@ -85,26 +86,6 @@ if (props.selectedService === null) {
     </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-  //  <div className="row featurette">
-  //    <div className="col-md-7">
-  //      <h2 className="featurette-heading">{props.selectedService.title}. <span className="text-muted">Luhu Design Services</span></h2>
-  //      <h4 className="featurette-subheading">{props.selectedService.subtitle}</h4>
-  //      <p className="lead">{props.selectedService.summary}</p>
-  //      <p><a className="btn btn-secondary" href="/contact" role="button">Learn more</a></p>
-  //    </div>
-  //    <div className="col-md-5">
-  //      <img className="featurette-image rounded-circle img-fluid mx-auto" alt={props.selectedService.id} data-src="holder.js/500x500/auto" alt="500x500" src={props.selectedService.image} data-holder-rendered="true"/>
-  //    </div>
-  //  </div>
      )
    }
  }

@@ -1,5 +1,6 @@
 var React = require('react');
 var Link = require('react-router-dom').Link;
+var Helmet = require('react-helmet').default;
 
 function BlogPost (props) {
 
@@ -19,6 +20,35 @@ if (props.clickedPost === null) {
  return (
 
 <div className="post-component">
+
+  <Helmet>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+      <meta name="apple-mobile-web-app-capable" content="yes"/>
+      <base href="/"/>
+      <meta charset="utf-8"/>
+      <title>{`${props.clickedPost.title} | Engineering Blog | Luhu Design`}</title>
+      <meta name="description" content={`${props.clickedPost.description}`}/>
+      <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico"/>
+      <link rel="canonical" href={`http://www.luhudesign.com/blog${props.clickedPost.slug}`} />
+      <meta property="og:site_name" content="Luhu Design, LLC"/>
+      <meta property="og:title" content={`${props.clickedPost.title} | Luhu Design`}/>
+      <meta property="og:url" content={`http://www.luhudesign.com/blog${props.clickedPost.slug}`}/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:description" content={`${props.clickedPost.description}`}/>
+      <meta property="og:image" content={`${props.clickedPost.image}`}/>
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+      <meta itemprop="name" content={`${props.clickedPost.title}`}/>
+      <meta itemprop="url" content={`http://www.luhudesign.com/blog${props.clickedPost.slug}`}/>
+      <meta itemprop="thumbnailUrl" content={`${props.clickedPost.image}?format=1000w`}/>
+      <link rel="image_src" href={`${props.clickedPost.image}?format=1000w`}/>
+      <meta itemprop="image" content={`${props.clickedPost.image}?format=1000w`}/>
+      <meta name="twitter:title" content={`${props.clickedPost.title}`}/>
+      <meta name="twitter:image" content={`${props.clickedPost.image}?format=1000w`}/>
+      <meta name="twitter:url" content={`http://www.luhudesign.com/blog${props.clickedPost.slug}`}/>
+      <meta name="twitter:card" content="summary"/>
+  </Helmet>
 
     <header className="intro-header" style={style}>
       <div className="row back-container text-left">
@@ -48,7 +78,23 @@ if (props.clickedPost === null) {
      </header>
 
    <div className="container">
-     <div className="blog-content" dangerouslySetInnerHTML={{__html: props.clickedPost.content}}></div>
+     <div className="blog-content" dangerouslySetInnerHTML={{__html: props.clickedPost.content}}>
+
+
+     </div>
+     <div className="categories">
+       <p>Categories:&nbsp;
+         {props.clickedPost.categories.map(function(category, index) {
+           return (
+             <span key={category}>
+               <a href="/">{category}</a>{props.clickedPost.categories.length-1 === index ? null : <span>,&nbsp;</span>}
+             </span>
+           )
+
+         })}
+       </p>
+
+     </div>
    </div>
  </div>
 

@@ -7,24 +7,6 @@ var Helmet = require('react-helmet').default;
 
 function ServicesList (props) {
 
- //  constructor(props) {
- //   super();
- //
- //   this.state = {
- //     isHover: false
- //   }
- //   this.handleHover = this.handleHover.bind(this);
- // }
- //
- // handleHover () {
- //
- //   this.setState(function () {
- //     return {
- //       selectedService: serv
- //     }
- //    });
- //  }
-
     if (props.selectedService !== null) {
         return null
       } else {
@@ -38,7 +20,7 @@ function ServicesList (props) {
               <meta charset="utf-8"/>
               <title>Denver Engineering and Mechanical Design Services | Luhu Design</title>
               <meta name="description" content="Physical product design and engineering services for startups and inventors. Some of our services include Mechanical Engineering CAD, IoT Product Development, 3D Modeling, 3D Printing, Physical Product Design."/>
-              <link rel="shortcut icon" type="image/x-icon" href="/apps/img/favicon.ico"/>
+              <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico"/>
               <link rel="canonical" href="http://www.luhudesign.com/services"/>
               <meta property="og:site_name" content="Luhu Design, LLC"/>
               <meta property="og:title" content="Denver Engineering and Mechanical Design Services | Luhu Design"/>
@@ -78,34 +60,23 @@ function ServicesList (props) {
                         <div className="col-md-3 col-sm-6 service-listing text-center" key={serv.id}>
 
 
-                          <div className="overlay">
+
                             <Link
                              to={"/services/"+serv.id}
                              className="service-list-item text-center"
                              onClick={props.onSelect.bind(null, serv)}>
-                               <img className="rounded-circle service-list-item-image" src={serv.image} alt={serv.id}/>
-                               <h2 className="text-center">
-                                 {serv.title}
-                               </h2>
+                             <div className="overlay">
+                               <div className="image-wrapper">
+                                 <img className="rounded-circle service-list-item-image" src={serv.image} alt={serv.id}/>
+                                 <h2 className="text-center">
+                                   {serv.title}
+                                 </h2>
+                              </div>
+                            </div>
                            </Link>
-                          </div>
 
-
-
-
-
-                        {/* <h2>
-                          <Link
-                           to ={"/services/"+serv.id}
-                           className="service-listing-subheading"
-                           onClick={props.onSelect.bind(null, serv)}>
-                              {serv.subtitle}
-                          </Link>
-                        </h2> */}
-                          {/* <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p> */}
 
                         </div>
-
                     )
                   })}
                </div>
@@ -135,8 +106,8 @@ class Services extends React.Component {
      title: '3D Printing',
      subtitle: 'Fast Local 3D Printing in Denver',
      leadOne: 'Got a fun design you would like to print out? Or need a mockup for that big meeting? We can 3D print designs within an envelope of 6.2" x 6.0" x 6.0" in various colors of PLA and ABS.',
-     leadTwo: 'Visit the <a href="https://www.3dhubs.com/service/223729" target="_blank">Luhu Design 3D Printing Services</a> page on 3D Hubs or talk to us today to get started.',
-     image: '/app/img/electronics-chip-cropped.jpg',
+     leadTwo: "Visit the <a href='https://www.3dhubs.com/service/223729' target='_blank'>Luhu Design 3D Printing Services page on 3D Hubs</a> or contact to us today to get started.",
+     image: '/app/img/3d-printer.jpg',
      description: "Fast local 3D printing services in Denver, CO. We can 3D print designs in various colors in both PLA and ABS filaments.",
      metaTitle: "Fast Local 3D Printing Services in Denver"
      },
@@ -187,10 +158,10 @@ class Services extends React.Component {
      },
      {id: 'engineering-consultation',
      title: 'Engineering Consultation',
-     subtitle: 'We Are Mechanical Engineering Problem Solvers',
+     subtitle: 'Talk to The Mechanical Engineering Problem Solvers',
      leadOne: "Have a mechanical engineering problem you can't solve?",
      leadTwo: "Using our experience of solving engineering problems with limited resources and time, we can create realistic solutions for you, so you can focus on more important things.",
-     image: '/app/img/electronics-chip-cropped.jpg',
+     image: '/app/img/engineering-consultation.jpg',
      description: "Mechanical engineering consultation services in Denver, CO. Have a mechanical engineering problem and limited resources and time? Let Luhu Design help.",
      metaTitle: "Mechanical Engineering Consultation Services in Denver"
      },
@@ -198,9 +169,9 @@ class Services extends React.Component {
      title: 'Coffee Consultation',
      subtitle: "Getting Started With Your Idea",
      leadOne: "Not sure where to start? We're more than happy to chat with you about your idea and where to go from here.",
-     leadTwo: "We'll also settle for beer.",
-     image: '/app/img/kaboompics-work-tea-coffee.jpg',
-     description: "Mechanical design and engineering consultation services in Denver, CO. Have an idea and not sure where to start? Grab some coffee with Luhu Design to chat about your idea.",
+     leadTwo: "We'll also settle for a beer.",
+     image: '/app/img/coffee-consultation.jpg',
+     description: "Mechanical design and engineering consultation services in Denver, CO. Have an idea and not sure where to start? Talk with Luhu Design about your idea.",
      metaTitle: "Talk To An Expert About Your Engineering Problem"
      }
    ];
