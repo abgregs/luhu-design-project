@@ -13,6 +13,7 @@ if (props.selectedService === null) {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: '100% top'
+
 }
 
  return (
@@ -75,8 +76,8 @@ if (props.selectedService === null) {
            <div className="callout-container">
              <div className="callout">
                <div className="button-wrapper hero">
-               <a className="button hero" href="/contact" role="button">
-                 <span>Talk to Us Today</span>
+               <a className="button hero" href={props.selectedService.buttonLink} role="button">
+                 <span>{props.selectedService.buttonText}</span>
                  </a>
                </div>
            </div>

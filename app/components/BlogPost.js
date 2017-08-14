@@ -89,17 +89,13 @@ if (props.clickedPost === null) {
              <span key={category}>
                <a href="/">{category}</a>{props.clickedPost.categories.length-1 === index ? null : <span>,&nbsp;</span>}
              </span>
-           )
-
+            )
          })}
        </p>
-
      </div>
    </div>
  </div>
-
-
-
+ 
      )
    }
  }

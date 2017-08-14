@@ -36,7 +36,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-  color: rgba(34, 76, 255, 0.8);
+  color: rgba(34, 76, 255, 0.7);
   text-decoration: none;
 }
 
@@ -147,7 +147,7 @@ h6 {
   color: #95a9ff;
   border-bottom-color: #95a9ff;
 }*/
-.navbar > .list > .item.-link.-active,
+.navbar > .list > .item.-link.active,
 .navbar > .list > .item.-link:hover,
 .navbar > .list > .item.-link:focus {
 
@@ -850,7 +850,7 @@ figcaption {
 
 .back-link:hover, .back-link:focus {
   text-decoration: none;
-  color: rgba(34, 76, 255, 0.8);
+  color: rgba(34, 76, 255, 1);
 }
 
 .back-container h4 {
@@ -910,8 +910,6 @@ figcaption {
 
 .overlay {
   position: relative;
-  cursor: pointer;
-
 }
 
 .overlay:before {
@@ -1814,8 +1812,12 @@ a.svg:after {
   }
 
   .blog-content {
-    /*padding-top: 28px;*/
     padding-bottom: 60px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .categories {
     font-size: 18px;
     line-height: 24px;
   }

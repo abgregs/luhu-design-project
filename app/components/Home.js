@@ -65,8 +65,8 @@ class Home extends React.Component {
             <div className="skills">
               <ul>
                 <li className="col-sm-4"><h3>Physical Product Design</h3></li>
-                <li className="col-sm-4"><h3>CAD Mechanical Design</h3></li>
-                <li className="col-sm-4"><h3>3D Modeling</h3></li>
+                <li className="col-sm-4"><h3>Mechanical Design</h3></li>
+                <li className="col-sm-4"><h3>3D CAD Modeling</h3></li>
                 <li className="col-sm-4"><h3>Engineering Consultation</h3></li>
                 <li className="col-sm-4"><h3>Rapid Prototyping</h3></li>
                 <li className="col-sm-4"><h3>IoT Product Development</h3></li>

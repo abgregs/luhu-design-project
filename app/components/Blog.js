@@ -1,109 +1,12 @@
 var React = require('react');
 var NavLink = require('react-router-dom').NavLink;
-var PropTypes = require('prop-types');
 var BlogPost = require('./BlogPost');
 var Link = require('react-router-dom').Link;
 var Helmet = require('react-helmet').default;
-
-function BlogList (props) {
-
-    if (props.clickedPost !== null) {
-        return null
-      } else {
-    return (
-
-    <div className="bloglist-component">
-
-      <Helmet>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-          <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-          <meta name="apple-mobile-web-app-capable" content="yes"/>
-          <base href="/"/>
-          <meta charset="utf-8"/>
-          <title>Denver Engineering and Mechanical Design Blog | Luhu Design</title>
-          <meta name="description" content="A blog by the engineering and mechanical design problem solvers of Luhu Design located in Denver, Colorado."/>
-          <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico"/>
-          <link rel="canonical" href="http://www.luhudesign.com/blog"/>
-          <meta property="og:site_name" content="Luhu Design, LLC"/>
-          <meta property="og:title" content="Denver Engineering and Mechanical Design Blog | Luhu Design"/>
-          <meta property="og:url" content="http://www.luhudesign.com/blog"/>
-          <meta property="og:type" content="website"/>
-          <meta property="og:description" content="A blog by the engineering and mechanical design problem solvers of Luhu Design located in Denver, Colorado."/>
-          <meta property="og:image" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
-          <meta property="og:image:width" content="488"/>
-          <meta property="og:image:height" content="486"/>
-          <meta itemprop="name" content="Services"/>
-          <meta itemprop="url" content="http://www.luhudesign.com/blog"/>
-          <meta itemprop="thumbnailUrl" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
-          <link rel="image_src" href="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
-          <meta itemprop="image" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
-          <meta name="twitter:title" content="Home"/>
-          <meta name="twitter:image" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
-          <meta name="twitter:url" content="http://www.luhudesign.com/blog"/>
-          <meta name="twitter:card" content="summary"/>
-
-      </Helmet>
+var BlogList = require('./BlogList');
 
 
-
-
-      <header className="intro-header">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div className="heading-container text-center">
-                        <h1 className="heading">Luhu Blog</h1>
-                        <div className="divider">
-                          <hr/>
-                        </div>
-                        <h2 className="sub-heading">A Blog About Mechanical<br/>Design and Engineering</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-
-      <div className="container">
-        <div className="row">
-            <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 list-container">
-
-              {props.posts.map(function(post) {
-                return (
-
-                <div className="post-preview" key={post.slug}>
-                    <Link to={"/blog"+post.slug}
-                    onClick={props.onSelect.bind(null, post)}>
-                        <h2 className="post-title">
-                            {post.title}
-                        </h2>
-                        <h4 className="post-subtitle">
-                            {post.subtitle}
-                        </h4>
-                    </Link>
-                    <p className="post-meta">Posted by <span className="post-author">{post.author}</span> on {post.date}</p>
-                  <hr/>
-                </div>
-
-
-              )
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-
-)}
-}
-
-BlogList.propTypes = {
-  onSelect: PropTypes.func.isRequired,
-  posts: PropTypes.array.isRequired,
-};
-
-
-class BlogHome extends React.Component {
+class Blog extends React.Component {
 
   constructor(props) {
    super();
@@ -137,7 +40,7 @@ class BlogHome extends React.Component {
      date: 'January 12, 2017',
      categories: ['3D Printing', 'IoT', 'Industry'],
      image: '/app/img/electronics-chip-cropped.jpg',
-     content: "<p>Last week I was fortunate enough to be able to attend the Consumer Electronics Show (CES)! You guys have probably read all about this big stuff, like LG's super thin TV, or how Alexa is taking over the world. However, I spent a bit of time on the smaller floors, and wanted to let you guys know about all that I learned from the booths off the radar.<h2>3D Printing</h2><p>There are lots of companies investing in getting stronger 3D printed materials on the market, and some trying to make printing in metal more affordable.<a href='http://essentiummaterials.com/' target='_blank'>Essentium Materials</a>is working on filaments with strength similar to injection molded plastics, and carbon fiber reinforced materials. <p><a href='https://markforged.com/why-markforged/' target='_blank'>Markforged</a>is also working to create stronger, carbon fiber enforced materials, but is specializing in creating desktop metal 3D printers.<p>And so many scanners! Although I am partial to the ancient methods of surface modeling via pictures, some of those scanners are neat, portable, and accurate.<h2>Sensors And IoT</h2><p>I definitely enjoyed walking around and talking to the MEMS and sensor companies and seeing what they had to offer. The sensor that I personally thought was the coolest was <a href='https://www.stretchsense.com/' target='_blank'>StretchSense</a>. They have stretchable sensors that can measure motion, displacement, force, etc. They can easily be integrated into clothing and fabric, to make them perfect for the textile market. They will also work with you on developing your product, and sell you evaluation kits to help you get to the next level. I hope I get a project where I can work with them in the future!<p>People are definitely catching onto the IoT trend. There were several companies, like <a href='http://www.bosch-connectivity.com/en/' target='_blank'>Bosch</a> and <a href='https://www.rigado.com/products/' target='_blank'>Rigado</a> providing certified development modules for folks to develop their own connected devices. Bosch is even working on a LoRa add on that they anticipate to be ready towards the end of the year!<p>I was most impressed with <a href='http://www.breadware.com/' target='_blank'>Breadware</a>'s platform, however. It was end to end, including easy firmware and UX development for your product. It isn't necessarily a go to market solution for your connected device, but will help you (and me!) quickly prototype.<h2>The Coolest Thing I Saw At CES....</h2><p>was <a href='http://bondhome.io/' target='_blank'>Bond</a>. Yeah, there were lots of smart home devices and remotes and apps, but you need smart appliances to use them. With Bond, it will take the IR sensors from your &quot;dumb&quot; home items with remotes, and convert them to IR sensors. So say you are still in bed, but don't want to open up the garage door for your irresponsible roommate who lost their remote. Just pick up your phone, open the Bond app, and open and close the door without moving a muscle. <p>Seeing all the cool new devices was a great time, but the people at CES were the best. You would never know if you were talking to a marketing person, or the inventor themselves at a booth, and all the bars on the strip were filled with people in the industry, making cool things happen.<p>Hope to see you at CES 2018!</p>"
+     content: "<p>Last week I was fortunate enough to be able to attend the Consumer Electronics Show (CES)! You guys have probably read all about this big stuff, like LG's super thin TV, or how Alexa is taking over the world. However, I spent a bit of time on the smaller floors, and wanted to let you guys know about all that I learned from the booths off the radar.<h2>3D Printing</h2><p>There are lots of companies investing in getting stronger 3D printed materials on the market, and some trying to make printing in metal more affordable. <a href='http://essentiummaterials.com/' target='_blank'>Essentium Materials</a> is working on filaments with strength similar to injection molded plastics, and carbon fiber reinforced materials. <p><a href='https://markforged.com/why-markforged/' target='_blank'>Markforged</a> is also working to create stronger, carbon fiber enforced materials, but is specializing in creating desktop metal 3D printers.<p>And so many scanners! Although I am partial to the ancient methods of surface modeling via pictures, some of those scanners are neat, portable, and accurate.<h2>Sensors And IoT</h2><p>I definitely enjoyed walking around and talking to the MEMS and sensor companies and seeing what they had to offer. The sensor that I personally thought was the coolest was <a href='https://www.stretchsense.com/' target='_blank'>StretchSense</a>. They have stretchable sensors that can measure motion, displacement, force, etc. They can easily be integrated into clothing and fabric, to make them perfect for the textile market. They will also work with you on developing your product, and sell you evaluation kits to help you get to the next level. I hope I get a project where I can work with them in the future!<p>People are definitely catching onto the IoT trend. There were several companies, like <a href='http://www.bosch-connectivity.com/en/' target='_blank'>Bosch</a> and <a href='https://www.rigado.com/products/' target='_blank'>Rigado</a> providing certified development modules for folks to develop their own connected devices. Bosch is even working on a LoRa add on that they anticipate to be ready towards the end of the year!<p>I was most impressed with <a href='http://www.breadware.com/' target='_blank'>Breadware</a>'s platform, however. It was end to end, including easy firmware and UX development for your product. It isn't necessarily a go to market solution for your connected device, but will help you (and me!) quickly prototype.<h2>The Coolest Thing I Saw At CES....</h2><p>was <a href='http://bondhome.io/' target='_blank'>Bond</a>. Yeah, there were lots of smart home devices and remotes and apps, but you need smart appliances to use them. With Bond, it will take the IR sensors from your &quot;dumb&quot; home items with remotes, and convert them to IR sensors. So say you are still in bed, but don't want to open up the garage door for your irresponsible roommate who lost their remote. Just pick up your phone, open the Bond app, and open and close the door without moving a muscle. <p>Seeing all the cool new devices was a great time, but the people at CES were the best. You would never know if you were talking to a marketing person, or the inventor themselves at a booth, and all the bars on the strip were filled with people in the industry, making cool things happen.<p>Hope to see you at CES 2018!</p>"
      },
      {slug: '/3d-printing-threads',
      title: "3D Printing Threads",
@@ -219,22 +122,4 @@ class BlogHome extends React.Component {
   }
 }
 
-
- //       <div>
- //           <h1 className="heading">Engineering and Design Services</h1>
- //           <h2 className="sub-heading">Subheading</h2>
- //           <div className="services-nav-component">
- //           <div className="navbar area">
- //             <ul>
- //               <li>
- //                 {serviceNode}
- //               </li>
- //             </ul>
- //           </div>
- //          </div>
- //       </div>
- //     );
- //   }
- // }
-
-module.exports = BlogHome;
+module.exports = Blog;

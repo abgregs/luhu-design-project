@@ -61,28 +61,22 @@ class About extends React.Component {
                   After graduation, Lindsey returned to Denver to work as a mechanical engineer in the aerospace industry for over 6 years, taking numerous electronics products from concept to production and test.<br/><br/>
                   Lindsey brings her mechanical design aptitude, attention to detail, and creative mind to all projects at Luhu Design. She utilizes her extensive network of hardware engineers, software developers, and UX designers to help provide complete products to clients. </p>
                 </div>
-              <div className="divider">
-                <hr/>
-              </div>
-            <div className="callout-container">
-              <div className="callout">
-                <p className="lead">Talk to us today to see how we can help solve your mechanical engineering and design challenges.</p>
-                <div className="button-wrapper get-in-touch">
-                <a className="button get-in-touch" href="/contact" role="button"><span>Talk to us today</span></a>
+                <div className="divider">
+                  <hr/>
+                </div>
+                <div className="callout-container">
+                  <div className="callout">
+                    <p className="lead">Talk to us today to see how we can help solve your mechanical engineering and design challenges.</p>
+                    <div className="button-wrapper get-in-touch">
+                    <a className="button get-in-touch" href="/contact" role="button"><span>Talk to us today</span></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
     )
   }
 }
