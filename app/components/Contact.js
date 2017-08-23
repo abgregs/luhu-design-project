@@ -1,6 +1,6 @@
-var React = require('react');
-var Connect = require('./Connect');
-var Helmet = require('react-helmet').default;
+import React from 'react'
+import Connect from './Connect'
+import Helmet from 'react-helmet'
 
 class Contact extends React.Component {
   render() {
@@ -46,4 +46,4 @@ class Contact extends React.Component {
   }
 }
 
-module.exports = Contact;
+export default Contact

@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react'
 import { FormErrors } from './FormErrors';
 
 class Form extends React.Component {

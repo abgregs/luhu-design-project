@@ -1,5 +1,5 @@
-var React = require('react');
-var Helmet = require('react-helmet').default;
+import React from 'react'
+import Helmet from 'react-helmet'
 
 class About extends React.Component {
   render() {
@@ -81,4 +81,4 @@ class About extends React.Component {
   }
 }
 
-module.exports = About;
+export default About

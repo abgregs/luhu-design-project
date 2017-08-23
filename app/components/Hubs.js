@@ -35,4 +35,4 @@ function Hubs () {
   )
 }
 
-module.exports = Hubs;
+export default Hubs

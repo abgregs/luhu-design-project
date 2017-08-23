@@ -1,6 +1,6 @@
-var React = require('react');
-var Link = require('react-router-dom').Link;
-var Form = require('./Form');
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Form from './Form'
 
 function Connect () {
   return (
@@ -65,4 +65,4 @@ function Connect () {
   )
 }
 
-module.exports = Connect;
+export default Connect

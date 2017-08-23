@@ -1,38 +1,28 @@
-var React = require('react');
-var ReactRouter = require('react-router-dom');
-var Router = ReactRouter.BrowserRouter;
-var Route = ReactRouter.Route;
-var browserHistory = ReactRouter.browserHistory;
-var Switch = ReactRouter.Switch;
-var Nav = require('./Nav');
-var Home = require('./Home');
-var Services = require('./Services');
-var ServiceDetail = require('./ServiceDetail');
-var ServicesList = require('./ServicesList');
-var Blog = require('./Blog');
-var About = require('./About');
-var Contact = require('./Contact');
-var Footer = require('./Footer');
-var ScrollToTop = require('./ScrollToTop').default;
+import React from 'react'
+import Home from './Home'
+import Blog from './Blog'
+import About from './About'
+import Contact from './Contact'
+import Footer from './Footer'
+import Services from './Services'
+import ScrollToTop from './ScrollToTop'
+import Nav from './Nav'
+import { Route, Switch } from 'react-router-dom'
 
 class App extends React.Component {
 
-
-
   render() {
     return (
-      <Router history={history}>
         <ScrollToTop>
         <div>
           <div className="page-container">
-            <Nav/>
+            <Nav />
             <Switch>
-              <Route exact path='/' component={Home}/>
-              <Route exact path="/services:/id" component={ServiceDetail} />
-              <Route path='/services' component={Services}/>
-              <Route path='/blog' component={Blog}/>
-              <Route path='/about' component={About}/>
-              <Route path='/contact' component={Contact}/>
+              <Route exact path='/' component={Home} />
+              <Route path='/services' component={Services} />
+              <Route path='/blog' component={Blog} />
+              <Route path='/about' component={About} />
+              <Route path='/contact' component={Contact} />
               <Route render={function () {
                 return <p>Page Not Found</p>
               }} />
@@ -41,7 +31,6 @@ class App extends React.Component {
           <Footer/>
         </div>
       </ScrollToTop>
-      </Router>
     )
   }
 }

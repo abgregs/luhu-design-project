@@ -886,12 +886,6 @@ figcaption {
 
 }
 
-
-.service-list-item {
-
-
-}
-
 .image-wrapper {
   position: relative;
   width: 200px;
@@ -905,6 +899,7 @@ figcaption {
 .service-list-item:hover,
 .service-list-item:focus {
    background: transparent;
+   color: #fff;
 
 }
 
@@ -1483,11 +1478,11 @@ a.svg:after {
   .navbar-component > .navbar > .brand,
   .navbar-component > .navbar > .brand > img,
   .navbar-component > .navbar > .list > .item.-link {
-	transition: .6s all;
-	-moz-transition: .6s all;
-	-webkit-transition: .6s all;
-	-o-transition: .6s all;
-  -ms-webkit-transition: .6s all;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-webkit-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+     transition: all 0.6s ease;
   }
 
   .navbar-component {
