@@ -3,6 +3,9 @@ import BlogData from '../BlogData'
 import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
+// The BlogList iterates over all of the blog posts
+// and creates a link to each post
+
 const BlogList = () => (
   <div className="bloglist-component">
 

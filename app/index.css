@@ -544,7 +544,8 @@ h6 {
   font-size: 18px;
 }
 
-.post-component .heading-container {
+.post-component .heading-container,
+.categorylist-heading-container {
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0,0,0,.25);
 }
@@ -559,13 +560,15 @@ h6 {
   color: #fff;
 }
 
-.post-component .heading-container .heading {
+.post-component .heading-container .heading,
+.categorylist-heading-container h1 {
   font-size: 44px;
   font-weight: 400;
   line-height: 52px;
 }
 
-.post-component .sub-heading {
+.post-component .sub-heading,
+.categorylist-heading-container h2 {
   font-size: 26px;
   font-weight: 300;
   margin-top: 16px;
@@ -1795,12 +1798,14 @@ a.svg:after {
     margin: 0 12px;
   }
 
-  .post-component .heading-container .heading {
+  .post-component .heading-container .heading,
+  .categorylist-heading-container h1 {
     font-size: 32px;
     line-height: 40px;
   }
 
-  .post-component .sub-heading {
+  .post-component .sub-heading,
+  .categorylist-heading-container h2 {
     font-size: 20px;
     margin-top: 14px;
     line-height: 24px;

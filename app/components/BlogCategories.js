@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import BlogCategoriesHome from './BlogCategoriesHome'
-import BlogCategoryListing from './BlogCategoryList'
+import BlogCategoryList from './BlogCategoryList'
 
 
 const BlogCategories = () => (

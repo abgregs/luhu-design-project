@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 var Helmet = require('react-helmet').default;
 
 // The ServiceDetail looks up the service using the id from
-// the URL's pathname.
+// the URL's pathname and displays that service's details page.
 
 const ServiceDetail = (props) => {
   const service = ServicesData.get(

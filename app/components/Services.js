@@ -4,11 +4,13 @@ import ServicesList from './ServicesList'
 import { Switch, Route } from 'react-router-dom'
 
 const Services = () => (
+
   <Switch>
-    <Route exact path='/services' component={ServicesList}/>
     <Route path='/services/:id' component={ServiceDetail}/>
+    <Route exact path='/services' component={ServicesList}/>
   </Switch>
 )
+
 
 export default Services
 

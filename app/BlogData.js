@@ -83,8 +83,12 @@ const BlogData = {
   get: function(id) {
     const isPost = p => p.slug === id
     return this.posts.find(isPost)
+  },
+  getPostsFromCategory: function(cat) {
+    const checkCat = c => c === cat
+    return this.posts.filter( p => p.categorySlugs.find(checkCat)
+    )
   }
-  // getPostsFromCategory function to be added...
 }
 
 export default BlogData

@@ -3,6 +3,8 @@ import BlogData from '../BlogData'
 import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
+// The BlogPost looks up the correct post using the id from
+// the URL's pathname and displays that post.
 
 const BlogPost = (props) => {
 
@@ -17,6 +19,10 @@ const BlogPost = (props) => {
     backgroundPosition: '100% top'
   }
 
+  // componentWillUnmount() {
+  //   console.log('unmount');
+  // }
+
   return (
     <div className="post-component">
 
@@ -26,7 +32,7 @@ const BlogPost = (props) => {
           <meta name="apple-mobile-web-app-capable" content="yes"/>
           <base href="/"/>
           <meta charset="utf-8"/>
-          <title>{`${post.title} | Engineering Blog | Luhu Design`}</title>
+          <title>{`${post.title} | Luhu Design`}</title>
           <meta name="description" content={`${post.description}`}/>
           <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico"/>
           <link rel="canonical" href={`http://www.luhudesign.com/blog/${post.slug}`} />
@@ -88,7 +94,7 @@ const BlogPost = (props) => {
                    <Link to={`/blog/categories/${post.categorySlugs[index]}`}>
                      {category}
                    </Link>
-                   {post.categories.length-1 === index ? null : <span>,&nbsp;</span>}
+                   {post.categories.length-1 !== index ? <span>,&nbsp;</span> : null}
                  </span>
                )
              })}

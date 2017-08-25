@@ -52,17 +52,17 @@ const ServicesList = () => (
 
           <div className="row services-list-component text-center">
 
-            {ServicesData.all().map(s => (
-              <div className="col-md-3 col-sm-6 service-listing text-center" key={s.id}>
+            {ServicesData.all().map(serv => (
+              <div className="col-md-3 col-sm-6 service-listing text-center" key={serv.id}>
 
                   <Link
-                   to={`/services/${s.id}`}
+                   to={`/services/${serv.id}`}
                    className="service-list-item text-center">
                    <div className="overlay">
                      <div className="image-wrapper">
-                       <img className="rounded-circle service-list-item-image" src={s.image} alt={s.id}/>
+                       <img className="rounded-circle service-list-item-image" src={serv.image} alt={serv.id}/>
                        <h2 className="text-center">
-                         {s.title}
+                         {serv.title}
                        </h2>
                     </div>
                   </div>
