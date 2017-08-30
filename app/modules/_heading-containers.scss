@@ -1,0 +1,28 @@
+@import 'colors';
+
+
+
+//Hero
+
+@mixin hero-heading-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 62px;
+  color: $white;
+
+}
+
+@mixin hero-heading-container-tablet {
+  padding-top: 54px;
+  width: 80%;
+}
+
+@mixin hero-heading-container-mobile {
+  padding-top: 46px;
+}
+
+//Services
+
+@mixin services-heading-container {
+  margin-bottom: 48px;
+}

@@ -8,7 +8,7 @@ var Helmet = require('react-helmet').default;
 
 const ServicesList = () => (
 
-  <div className="jumbotron services-home feature">
+  <div className="jumbotron hero services-home feature">
     <Helmet>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -38,22 +38,25 @@ const ServicesList = () => (
         <meta name="twitter:card" content="summary"/>
 
     </Helmet>
-    <div className="main">
-      <div className="content-container">
-        <div className="content">
+
+      <div className="container">
           <div className="heading-container">
             <h1 className="heading">
-              Engineering and Mechanical<br/>Design Services
+              Services
             </h1>
-            <h2 className="sub-heading">
+            {/* <h2 className="sub-heading">
             Luhu Design
-            </h2>
+            </h2> */}
           </div>
 
           <div className="row services-list-component text-center">
 
             {ServicesData.all().map(serv => (
               <div className="col-md-3 col-sm-6 service-listing text-center" key={serv.id}>
+
+{/* IoT use multimeter image
+Rapid prototyping use welding image */}
+
 
                   <Link
                    to={`/services/${serv.id}`}
@@ -73,10 +76,7 @@ const ServicesList = () => (
             ))}
 
          </div>
-
-        </div>
     </div>
-  </div>
   </div>
 
 )

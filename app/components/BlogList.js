@@ -3,11 +3,12 @@ import BlogData from '../BlogData'
 import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
+
 // The BlogList iterates over all of the blog posts
 // and creates a link to each post
 
 const BlogList = () => (
-  <div className="bloglist-component">
+  <div className="jumbotron hero bloglist-component">
 
     <Helmet>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -38,21 +39,19 @@ const BlogList = () => (
         <meta name="twitter:card" content="summary"/>
     </Helmet>
 
-    <header className="intro-header">
-      <div className="container">
-          <div className="row">
-              <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                  <div className="heading-container text-center">
-                      <h1 className="heading">Luhu Blog</h1>
-                      <div className="divider">
-                        <hr/>
-                      </div>
-                      <h2 className="sub-heading">A Blog About Mechanical<br/>Design and Engineering</h2>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </header>
+      <header className="intro-header">
+            <div className="row">
+                <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div className="heading-container text-center">
+                        <h1 className="heading">Luhu Blog</h1>
+                        <div className="divider">
+                          <hr/>
+                        </div>
+                        <h2 className="sub-heading">A Blog About Mechanical<br/>Design and Engineering</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
 
 
 
@@ -78,6 +77,7 @@ const BlogList = () => (
       </div>
     </div>
   </div>
+
 
 )
 

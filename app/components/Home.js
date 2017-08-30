@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Hubs from './Hubs'
 import Helmet from 'react-helmet'
+import ContactButton from './ContactButton'
+
+//Hero home image crop desk/computer image from Steno
 
 class Home extends React.Component {
   render() {
@@ -40,23 +43,14 @@ class Home extends React.Component {
 
 
 
-        <div className="jumbotron home hero">
-          <div className="main">
-            <div className="content-container">
-              <div className="content">
+        <div className="jumbotron hero home">
+            <div className="container">
                 <div className="heading-container">
-                  <h2 className="brand-big">Luhu Design</h2>
-                  <h1 className="heading">
+                  <h1 className="heading">Luhu Design</h1>
+                  <h2 className="sub-heading">
                     Engineers. Designers.<br/>
                     Mechanical Problem Solvers.
-                  </h1>
-                  {/* <h2 className="sub-heading">  Luhu Design is a boutique design and engineering firm. We design functional products without sacrificing engineering integrity.</h2> */}
-
-
-                    {/* <div className="top links-box">
-                      <a href="/"></a>
-                    </div>*/}
-
+                  </h2>
 
                 </div>
                 {/* <div className="icon-wrapper">
@@ -87,30 +81,18 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
         </div>
       </div>
 
       <div className="jumbotron get-in-touch">
-        <div className="divider">
-        </div>
-        <div className="main">
+        <div className="container">
           <div className="content-container">
-            <div className="content">
-              <p className="lead">Luhu Design helps inventors and startups with their mechanical design, engineering and CAD needs. This ranges from helping to create 3D models from an idea or patent application, building and testing your first prototype or providing mechanical engineering support to IoT systems. </p>
-            </div>
-            <div className="callout-container">
-              <div className="callout">
+            <p className="lead">Luhu Design helps startups and hardware companies achieve their product goals through mechanical engineering and design support. This ranges from industrial and CAD design to mechanical support for your minimal viable product (MVP) to production CAD and drawings.</p>
                 <div className="divider">
                   <hr/>
                 </div>
                 <p className="lead">Talk to us today to see how we can help solve your mechanical engineering and design challenges.</p>
-                <div className="button-wrapper get-in-touch">
-                <a className="button get-in-touch" href="/contact" role="button"><span>Talk to us today</span></a>
-                </div>
-              </div>
-            </div>
+                <ContactButton/>
           </div>
         </div>
       </div>

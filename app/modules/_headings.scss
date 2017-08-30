@@ -1,0 +1,129 @@
+@import 'fonts';
+@import 'colors';
+@import 'text-shadow';
+
+
+//Hero
+
+@mixin hero-h1 {
+  font-family: $valera;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 80px;
+  letter-spacing: 4px;
+  text-shadow: $textshadow-black-med;
+  margin: 0 auto;
+}
+
+@mixin hero-h2 {
+  font-family: $valera;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1px;
+  text-shadow: $textshadow-black-med;
+  margin: 0 auto;
+  padding-top: 24px;
+}
+
+@mixin hero-h1-tablet {
+  font-size: 56px;
+  line-height: 60px;
+}
+
+@mixin hero-h2-tablet {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@mixin hero-h1-mobile {
+  font-size: 44px;
+  line-height: 48px;
+}
+
+@mixin hero-h2-mobile {
+  font-size: 24px;
+  line-height: 32px;
+  padding-top: 18px;
+}
+
+//Blog Content
+
+@mixin blog-h2 {
+  font-family: $saira-condensed;
+  margin-top: 36px;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-shadow: $textshadow-black-light;
+  margin-bottom: 12px;
+  font-weight: 300;
+
+}
+
+@mixin blog-h2-tablet {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+// Blog Post Header Section
+
+@mixin post-header-h1 {
+
+  font-family: $saira-extra-condensed;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: 4px;
+  text-shadow: $textshadow-black-med;
+  margin-top: 18px;
+  margin-bottom: 10px;
+
+}
+
+@mixin post-header-h2 {
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 40px;
+  text-shadow: $textshadow-black-med;
+  margin-top: 14px;
+  letter-spacing: 1.6px;
+  margin-bottom: 10px;
+}
+
+//Blog Post Listing Title and subtitle
+
+@mixin post-listing-title {
+  @include blog-h2;
+  margin-bottom: 0;
+}
+
+@mixin post-listing-subtitle {
+  font-family: $ubuntu;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 1.6px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+//Skills
+
+@mixin skills-h3 {
+  font-family: $saira-extra-condensed;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-size: 28px;
+  font-weight: 100;
+  text-shadow: $textshadow-black-light;
+}
+
+@mixin skills-h3-tablet {
+  font-size: 24px;
+}
+
+@mixin skills-h3-mobile {
+  font-size: 22px;
+}

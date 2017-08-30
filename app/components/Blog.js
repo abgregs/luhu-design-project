@@ -10,6 +10,7 @@ const Blog = () => (
     <Route path='/blog/:id' component={BlogPost}/>
     <Route exact path='/blog' component={BlogList}/>
   </Switch>
+
 )
 
 export default Blog

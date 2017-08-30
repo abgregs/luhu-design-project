@@ -5,8 +5,8 @@ import Logo from '../img/Luhu-Brandmark-Blue.svg';
 function Footer () {
   return (
     <div className='footer-component'>
-      <div className='footer area'>
-        <div className="social-links">
+      <div className='footer'>
+        <div className="brand social-links">
           <ul>
             <li>
               <a href="https://www.linkedin.com/company-beta/16185133/" target="_blank" className="link"><i className="fa fa-linkedin"></i></a>
@@ -40,13 +40,20 @@ function Footer () {
             </li>
           </ul>
         </div>
-        <div className="brand">
+        <div className="brand copyright">
           <ul>
             <li>
-              &copy; 2017 Luhu Design
+              &copy; 2017 Luhu Design, LLC
             </li>
           </ul>
           <img src={Logo}/>
+        </div>
+        <div className="brand website-credit">
+          <ul>
+            <li>
+              Website created<br/>by <a href="https://www.linkedin.com/in/austin-gregersen-a4b77440/" target='_blank'>Austin Gregersen</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

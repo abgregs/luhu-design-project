@@ -86,7 +86,6 @@ handleScroll () {
         <NavLink onClick={this.resetToggle} className="brand" exact to='/'><img src={Logo}/></NavLink>
         {/* <!-- List of links --> */}
         <nav role="navigation" id="navigation" className={[this.state.classOne, this.state.classTwo, "list"].join(' ')}>
-          {/* <NavLink onClick={this.resetToggle} className='navlink item -link' activeClassName='active' to='/'>Home</NavLink> */}
           <NavLink onClick={this.resetToggle} className='navlink item -link' activeClassName='active' to='/services'>Services</NavLink>
           <NavLink onClick={this.resetToggle} className='navlink item -link' activeClassName='active' to='/blog'>Blog</NavLink>
           <NavLink onClick={this.resetToggle} className='navlink item -link' activeClassName='active' to='/about'>About</NavLink>

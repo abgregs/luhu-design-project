@@ -3,7 +3,7 @@ const BlogData = {
   posts: [
     {slug: 'things-ive-learned-february-til-now',
     title: "Things I've Learned From February Until Now",
-    subtitle: "",
+    subtitle: "Laser Engraving to Particle Photon to Split Boards and More...",
     description: "Description goes here",
     author: 'Lindsey Cross',
     date: 'May 1, 2017',
@@ -86,9 +86,17 @@ const BlogData = {
   },
   getPostsFromCategory: function(cat) {
     const checkCat = c => c === cat
-    return this.posts.filter( p => p.categorySlugs.find(checkCat)
+    return this.posts.filter(
+      p => p.categorySlugs.find(checkCat)
     )
-  }
-}
+  },
+  // getNameFromCategory: function(cat) {
+  //   const checkCat = c => c === cat
+  //   const posts = this.posts.map(
+  //     p => p.categorySlugs.find(checkCat) ? p.categories()
+  //   )
+  //
+  // }
+ }
 
 export default BlogData

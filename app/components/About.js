@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import ContactButton from './ContactButton'
 
 class About extends React.Component {
   render() {
@@ -37,9 +38,7 @@ class About extends React.Component {
         </Helmet>
 
 
-        <div className="main">
-          <div className="content-container">
-            <div className="content">
+          <div className="container">
               <div className="row text-center about-main">
                 <div className="heading-container">
                   <h1 className="heading">Meet Luhu Design</h1>
@@ -64,19 +63,11 @@ class About extends React.Component {
                 <div className="divider">
                   <hr/>
                 </div>
-                <div className="callout-container">
-                  <div className="callout">
                     <p className="lead">Talk to us today to see how we can help solve your mechanical engineering and design challenges.</p>
-                    <div className="button-wrapper get-in-touch">
-                    <a className="button get-in-touch" href="/contact" role="button"><span>Talk to us today</span></a>
-                    </div>
-                  </div>
-                </div>
+                  <ContactButton/>
               </div>
-            </div>
-          </div>
+           </div>
         </div>
-      </div>
     )
   }
 }

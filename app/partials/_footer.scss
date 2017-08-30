@@ -1,0 +1,184 @@
+@import './modules/base';
+
+
+.footer-component {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $black;
+  font-family: $raleway;
+
+
+  .footer {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+    align-items: center;
+    padding: 0 2em;
+
+    .brand,
+    .footer > .social-links {
+      padding: 18px 0;
+    }
+  }
+}
+
+
+
+.footer > .brand > * {
+  display: inline;
+  margin: 0;
+}
+
+.footer li {
+  list-style-type: none;
+  display: inline;
+  color: $luhublue;
+  padding: 0 12px;
+  justify-content: center;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer > .brand > .logo {
+  padding: 12px;
+}
+
+.footer > .brand > img {
+  width: $logo-footer;
+}
+
+.footer-component .social-links i {
+  font-size: 38px;
+  color: $luhublue;
+}
+
+.footer-component .social-links i:hover, .footer-component .social-links i:focus {
+  color: $luhublue-opacity-light;
+}
+
+.footer-component .social-links svg {
+  height: 33px;
+  width: 33px;
+
+}
+
+.footer-component, .footer {
+  height: 86px;
+}
+
+.footer {
+  @include flex-row-stretch;
+
+  .brand {
+
+    * {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  .brand,
+  .social-links {
+    padding: 18px;
+  }
+}
+
+.footer li {
+  list-style-type: none;
+  display: inline;
+  color: $luhublue;
+  padding: 0 12px;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 850px) {
+
+  .footer-offset {
+    padding-bottom: 172px;
+  }
+
+  .footer-component {
+    height: 260px;
+
+    .footer {
+      height: 262px;
+      .social-links {
+        padding-top: 40px;
+        padding-bottom: 8px;
+      }
+    }
+  }
+
+  .page-container {
+    padding-bottom: 260px;
+  }
+
+  // .hubs {
+  //   padding-bottom: 220px;
+  // }
+
+  .footer {
+    background-color: $black;
+    @include flex-column;
+
+    .brand {
+      display: inline;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+
+  .footer-component {
+
+    .footer {
+      font-size: 12px;
+
+      .brand .website-credit,
+      .brand .copyright {
+        padding: 10px;
+
+
+      }
+
+      img {
+        display: none;
+      }
+
+      }
+
+      .social-links {
+
+        padding-left: 0;
+        padding-right: 0;
+
+        i {
+          font-size: 24px;
+        }
+
+        li {
+          padding: 0 6px;
+        }
+
+        ul li svg {
+          width: 22px;
+          height: 22px;
+        }
+
+
+      }
+    }
+  }

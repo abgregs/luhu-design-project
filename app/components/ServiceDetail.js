@@ -20,7 +20,7 @@ const ServiceDetail = (props) => {
 }
 
   return (
-    <div className="jumbotron services feature" style={style}>
+    <div className="jumbotron hero services" style={style}>
 
       <Helmet>
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -51,27 +51,33 @@ const ServiceDetail = (props) => {
           <meta name="twitter:card" content="summary"/>
       </Helmet>
 
-      <div className="main">
-        <div className="content-container">
-          <div className="content">
-            <div className="row back-container text-left">
-             <a href={"/services"} className="back-link">
-               <div className="back-link-wrapper">
-                 <span><i className="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
-                 <h2>Services Home </h2>
-              </div>
-            </a>
+      <div className="row back-container text-left">
+       <a href={"/services"} className="back-link">
+         <div className="back-link-wrapper">
+           <span><i className="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
+           <h2>Services Home </h2>
+        </div>
+      </a>
+      </div>
+
+            <div className="container">
+
+      <div className="heading-container">
+        <h1 className="heading">
+          {service.title}
+        </h1>
+        <h2 className="sub-heading">
+          {service.subtitle}
+        </h2>
+      </div>
+
+
+
+            <div className='services-content-container'>
+              <p className="lead">{service.leadOne}</p>
+              <p className="lead">{service.leadTwo}</p>
             </div>
-            <div className="heading-container">
-              <h1 className="heading">
-                {service.title}
-              </h1>
-              <h2 className="sub-heading">
-                {service.subtitle}
-              </h2>
-            </div>
-            <p className="lead">{service.leadOne}</p>
-            <p className="lead">{service.leadTwo}</p>
+
             <div className="callout-container">
               <div className="callout">
                 <div className="button-wrapper hero">
@@ -82,8 +88,6 @@ const ServiceDetail = (props) => {
             </div>
           </div>
         </div>
-      </div>
-     </div>
      </div>
   )
 }

@@ -3,6 +3,7 @@ import BlogData from '../BlogData'
 import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
+
 const BlogCategoryList = (props) => {
 
   const imgURL = '/app/img/electronics-chip-cropped.jpg'
@@ -18,12 +19,34 @@ const BlogCategoryList = (props) => {
 
   const posts = BlogData.getPostsFromCategory(catSlug)
 
-  var cat = catSlug.replace(/-{1,}/g,' ').replace(/(\s{1,}|\b)(\w)/g, function(m, space, letter)
-{
-  return space + letter.toUpperCase();
-})
+  const catSlugArray = posts[0].categorySlugs
+  const catNameArray = posts[0].categories
+  // var cat = getCat(catSlug)
+  //
+  // var getCat = function(catSlug) {
+  //
+  //   catSlugArray.forEach((category, index) =>
+  //     category === catSlug ? catNameArray[index] : null
+  //   )
+  // }
+  var cat = catSlug.replace(/-{1,}/g,' ').replace(/(\s{1,}|\b)(\w)/g,
+    function(m, space, letter) {
+      return space + letter.toUpperCase();
+    })
 
-  console.log(posts);
+  switch (cat) {
+    case 'Pla':
+      cat = 'PLA'
+      break;
+    case '3d Printing':
+      cat = '3D Printing'
+      break;
+    case '3d Modeling':
+      cat = '3D Modeling'
+      break;
+    default:
+    }
+
 
   return (
     <div className="bloglist-component">
@@ -70,8 +93,8 @@ const BlogCategoryList = (props) => {
             <div className="row">
                 <div className="col-lg-8 col-md-10">
                     <div className="categorylist-heading-container">
-                      <h1 className="categorylist-heading">Blog Posts Tagged with the Category: {cat}</h1>
-                      <h2 className="categorylist-sub-heading"> {posts.length} Results for Posts About {cat}</h2>
+                      <h1 className="categorylist-heading">Category: <i>{cat}</i></h1>
+                      <h2 className="categorylist-sub-heading"> {posts.length} {posts.length !== 1 ? 'Results' : 'Result'} for Blog Posts Under This Category </h2>
                       <p className="post-meta">
                         {/* Posted by <span className="post-author">{post.author}</span> on {post.date} */}
                       </p>

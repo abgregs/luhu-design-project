@@ -8,6 +8,7 @@ import Services from './Services'
 import ScrollToTop from './ScrollToTop'
 import Nav from './Nav'
 import { Route, Switch } from 'react-router-dom'
+import FooterOffset from './FooterOffset'
 
 class App extends React.Component {
 
@@ -28,6 +29,7 @@ class App extends React.Component {
               }} />
             </Switch>
           </div>
+          <FooterOffset/>
           <Footer/>
         </div>
       </ScrollToTop>

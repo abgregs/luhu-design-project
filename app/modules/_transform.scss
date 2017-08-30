@@ -1,0 +1,24 @@
+@mixin toggle-transform-before-med() {
+  -webkit-transform: translateY(12px) rotate(45deg);
+  -ms-webkit-transform: translateY(12px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
+}
+
+@mixin toggle-transform-after-med() {
+  -webkit-transform: translateY(-12px) rotate(-45deg);
+  -ms-webkit-transform: translateY(-12px) rotate(-45deg);
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+@mixin toggle-transform-before-small() {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-webkit-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+
+@mixin toggle-transform-after-small() {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}

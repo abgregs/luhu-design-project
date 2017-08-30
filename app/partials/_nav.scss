@@ -1,0 +1,302 @@
+@import './modules/base';
+
+.navbar-component {
+  background-color: $white;
+  box-shadow: $nav-box-shadow;
+  margin-bottom: 0px;
+
+}
+
+.navbar {
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: none;
+
+    @include flex-row-stretch;
+
+  .brand {
+    display: block;
+    padding-top: 24px;
+
+    img {
+      width: 220px;
+    }
+
+   }
+
+  .list.-on {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .list {
+
+    display: none;
+    @include flex-row-center;
+
+    .navlink {
+      text-decoration: none;
+      display: block;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      padding-left: 22px;
+      padding-right: 22px;
+      text-transform: uppercase;
+      color: $lightgrey;
+      font-size: 16px;
+      font-family: $raleway;
+    }
+
+    .navlink.item.-link {
+      color: $lightgrey;
+      border-bottom: 3px solid transparent;
+    }
+
+    .navlink.item.-link.active,
+    .navlink.item.-link:hover,
+    .navlink.item.-link:focus {
+      color: $luhublue;
+      border-bottom-color: $luhublue;
+    }
+
+  }
+
+  .toggle {
+    outline: none;
+    border: 0;
+    display: inline-block;
+    background-color: transparent;
+    background-image: none;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    margin: 0px 12px;
+
+      .icon,
+      .icon:before,
+      .icon:after {
+        position: relative;
+        display: block;
+        width: 36px;
+        height: 4px;
+        background-color: #555555;
+        @include single-transition-3;
+      }
+
+      .icon:before,
+      .icon:after {
+        position: absolute;
+        content: "";
+      }
+
+      .icon:before {
+        top: -12px;
+      }
+
+      .icon:after {
+        top: 12px;
+      }
+
+  }
+
+  .toggle.-active {
+
+    .icon {
+      background-color: transparent;
+    }
+
+    .icon:before {
+      @include toggle-transform-before-med;
+      background-color: $grey;
+    }
+
+    .icon:after {
+      @include toggle-transform-after-med;
+      background-color: $grey;
+    }
+
+  }
+
+}
+
+@media (min-width: 769px) {
+
+  .navbar-component {
+    height: 124px;
+  }
+
+  .navbar {
+
+    .toggle {
+      display: none;
+    }
+
+    .brand {
+
+      @include single-transition-3;
+
+      img {
+        @include single-transition-3;
+      }
+
+    }
+
+    .list {
+
+      @include display-flex;
+
+      .item.-link {
+        @include single-transition-3;
+        line-height: 121px;
+      }
+
+    }
+  }
+
+  .navbar-component.-scrolled {
+      height: 78px;
+
+      .navbar  {
+
+        .brand {
+          padding: 12px 0;
+
+          img {
+            width: 160px;
+          }
+
+        }
+
+        .list {
+          height: 68px;
+          padding-top: 8px;
+
+          .item.-link {
+            line-height: 78px;
+          }
+
+        }
+
+      }
+    }
+  }
+
+@media (max-width:768px) {
+
+  .navbar-component {
+    height: 78px;
+  }
+
+  .navbar {
+
+    .brand {
+      padding: 12px 0px;
+      align-items: center;
+
+        img {
+          width: 160px;
+          @include single-transition-3;
+        }
+    }
+
+    .list {
+      position: fixed;
+      top: 72px;
+      height: 60px;
+      left: 0;
+      width: 100%;
+      overflow-y: hidden;
+      overflow-x: auto;
+      background-color: $white;
+      justify-content: space-around;
+    	box-shadow: $nav-box-shadow;
+      align-items: stretch;
+      align-content: stretch;
+      padding-top: 14px;
+
+      .navlink {
+        font-size: 14px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 414px) {
+
+  .navbar {
+
+    .brand {
+
+      margin: 0px;
+
+      img {
+        width: 120px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .toggle {
+
+      .icon,
+      .icon:before,
+      .icon:after {
+        display: block;
+        width: 24px;
+        height: 3px;
+      }
+
+      .icon:before {
+       top: -8px;
+      }
+
+      .icon:after {
+        top: 8px;
+      }
+    }
+
+    .toggle.-active {
+      .icon:before {
+        @include toggle-transform-before-small;
+      }
+
+      .icon:after {
+        @include toggle-transform-after-small;
+      }
+
+    }
+
+    .list.-active {
+      position: fixed;
+      display: block;
+      top: 63px;
+      height: auto;
+      background-color: $white;
+      padding-top: 12px;
+    }
+
+    .list {
+
+      .item.-link {
+        margin: 0 auto;
+        padding: 12px;
+        text-align: center;
+      }
+    }
+
+  }
+
+  .navbar-component {
+    height: 64px;
+  }
+}

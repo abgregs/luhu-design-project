@@ -1,0 +1,86 @@
+@import 'colors';
+@import 'fonts';
+@import 'transitions';
+
+//Hero
+
+@mixin hero-button-text {
+  font-family: $raleway;
+  font-weight: 200;
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin hero-button-shared-styles {
+  margin-top: 22px;
+  padding: 24px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border-style: solid;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+}
+
+@mixin hero-button-white {
+  @include hero-button-shared-styles;
+  border-color: $white;
+  color: $white;
+}
+
+@mixin hero-button-blue {
+  @include hero-button-shared-styles;
+  border-color: $luhublue;
+  color: $luhublue;
+}
+
+
+@mixin hero-button-blue-bg-active {
+  text-decoration: none;
+  background: $white;
+  color: $luhublue;
+  @include single-transition-3;
+}
+
+@mixin hero-button-white-bg-active {
+  text-decoration: none;
+  background: $luhublue;
+  color: $white;
+  @include single-transition-3;
+}
+
+@mixin hero-button-dark-bg-active {
+  text-decoration: none;
+  background: $white;
+  color: $darkgrey;
+  @include single-transition-3;
+}
+
+@mixin hero-button-shared-styles-tablet {
+  font-size: 20px;
+  padding: 18px 12px;
+  border-width: 2px;
+
+}
+
+@mixin hero-button-shared-styles-mobile {
+  font-size: 16px;
+  padding: 14px 4px;
+  border-width: 1px;
+}
+
+
+
+//Back to Home
+
+@mixin back-to-home-text {
+  font-family: $raleway;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 0.2vw;
+
+}

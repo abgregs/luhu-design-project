@@ -1,21 +1,22 @@
 var React = require('react');
 
-function Hubs () {
-  return (
-    <div className="jumbotron hubs feature">
-      <div className="main">
-        <div className="content-container">
-          <div className="content">
+const Hubs = () => (
+    <div className="jumbotron hero hubs feature">
+        <div className="container">
             <div className="heading-container">
               {/* <span className="brand-big">Luhu Design</span> */}
-              <h2 className="heading">
+              <h1 className="heading">
                 Fast Local 3D Printing
-              </h2>
+              </h1>
               <h2 className="sub-heading">
                 Get your parts in 48 hours.</h2>
             </div>
-            <p className="lead">Need to print your parts fast? Located in the greater Denver area? Luhu Design can 3D print designs in various colors in both PLA or BLA filament materials.</p>
-            <p className="lead">Luhu Design's services are listed on 3D Hubs. 3D Hubs streamlines the process of finding local 3D printing services and ordering your 3D prints. Visit the Luhu Design 3D Printing Services page on 3D Hubs to get started with your order.</p>
+
+            <div className='content-container'>
+              <p className="lead">Need to print your parts fast? Located in the greater Denver area? Luhu Design can 3D print designs in various colors in both PLA or ABS filament materials.</p>
+              <p className="lead">Luhu Design's services are listed on 3D Hubs. 3D Hubs streamlines the process of finding local 3D printing services and ordering your 3D prints. Visit the Luhu Design 3D Printing Services page on 3D Hubs to get started with your order.</p>
+            </div>
+
       <div className="callout-container">
           <div className="callout">
 
@@ -28,11 +29,7 @@ function Hubs () {
         </div>
       </div>
     </div>
-    </div>
-  </div>
 </div>
-
-  )
-}
+)
 
 export default Hubs

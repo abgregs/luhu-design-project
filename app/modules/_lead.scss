@@ -1,0 +1,56 @@
+@import 'fonts';
+
+
+//Open Sans good for default lead font-style
+
+
+//Default
+
+@mixin lead-default {
+  font-family: $open-sans;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+
+@mixin lead-default-tablet {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin lead-default-mobile {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+//Jumbotron Feature
+
+@mixin lead-feature {
+  @include lead-default;
+  margin: 0 auto;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  width: 70%;
+
+}
+
+@mixin lead-feature-tablet {
+  @include lead-default-tablet;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  width: 80%;
+}
+
+//Jumbotron Regular
+
+@mixin lead-jumbotron-regular {
+  @include lead-default;
+  margin: 0 auto;
+  width: 60%;
+}
+
+@mixin lead-jumbotron-regular-tablet {
+  @include lead-default-tablet;
+  width: 80%;
+}

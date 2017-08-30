@@ -1,0 +1,51 @@
+@import 'lead';
+@import 'fonts';
+@import 'colors';
+//Services description content
+
+@mixin services-content-container {
+  margin-top: 46px;
+}
+
+//Blog post content
+
+@mixin post-container {
+    padding-top: 90px;
+}
+
+@mixin post-container-tablet {
+    padding-top: 60px;
+}
+
+@mixin post-categories-container {
+  @include lead-default;
+}
+
+@mixin post-categories-container-tablet {
+  @include lead-default-tablet;
+}
+
+
+//Skills
+
+@mixin skills-container {
+  height: 320px;
+  color: $white;
+  padding-top: 68px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@mixin skills-container-tablet {
+  height: 400px;
+  padding-top: 48px;
+  width: 90%;
+}
+
+@mixin skills-container-mobile {
+  padding-top: 40px;
+}
+
+@mixin hero-container {
+  color: $white;
+}
