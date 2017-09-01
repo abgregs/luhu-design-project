@@ -115,7 +115,7 @@ errorClass(error) {
     return (
       <div>
       <section className="contact-wrap">
-          <form action="https://formspree.io/abgregs@gmail.com"
+          <form action="https://formspree.io/lindsey@luhudesign.com"
       method="POST" className="contact-form">
       <div className="panel panel-default">
        <FormErrors formErrors={this.state.formErrors} />
@@ -141,7 +141,6 @@ errorClass(error) {
       </div>
       <div className="col-sm-12">
         <div className={`input-block ${this.errorClass(this.state.formErrors.email)}`}>
-          {/* <label htmlFor="">Email</label> */}
           <input type="text" name="_replyto" placeholder="Email Address" className="form-control"
             value={this.state.email}
             onBlur={this.handleUserInput}

@@ -619,7 +619,7 @@ figcaption {
       rgba(38, 38, 38, 0.6),
       rgba(38, 38, 38, 0.8)
     ),
-    url(./img/denver-city.jpg);
+    url(/app/img/denver-city.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100% top;
@@ -744,8 +744,8 @@ figcaption {
 .connect-container {
   background-image:
     linear-gradient(
-      rgba(34, 76, 255, 0.6),
-      rgba(34, 76, 255, 0.8)
+        rgba(34, 76, 255, 0.8),
+        rgba(34, 76, 255, 0.6)
     ),
     url(./img/engineer-desk.jpg);
     background-size: cover;
