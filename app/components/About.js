@@ -5,7 +5,8 @@ import ContactButton from './ContactButton'
 class About extends React.Component {
   render() {
     return (
-      <div className="jumbotron get-in-touch about">
+
+      <div>
 
         <Helmet>
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -37,15 +38,27 @@ class About extends React.Component {
 
         </Helmet>
 
+        <div className="jumbotron hero about">
 
-          <div className="container">
-              <div className="row text-center about-main">
-                <div className="heading-container">
-                  <h1 className="heading">Meet Luhu Design</h1>
-                  <h2 className="sub-heading">Mechanical Design and<br/> Engineering Firm</h2>
-                  {/* <h2 className="sub-heading">Denver, Colorado</h2> */}
+          <header className="intro-header">
+                <div className="row">
+                    <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div className="heading-container text-center">
+                            <h1 className="heading">Meet Luhu Design</h1>
+                            <div className="divider">
+                              <hr/>
+                            </div>
+                            <h2 className="sub-heading">Denver's Boutique Mechanical Engineering and Design Firm</h2>
+                        </div>
+                    </div>
                 </div>
-                <div className="spacer"></div>
+            </header>
+            
+          </div>
+
+    <div className="jumbotron white-bg about">
+          <div className="container">
+                <div className="row text-center about-main">
                 <p className="lead">Luhu Design is an innovative and intelligent mechanical product design firm located in Denver, Colorado. We strive to provide creative designs and solutions that stay true to the basics of mechanical engineering. We promise to give your product and idea that personal touch and attention.</p>
                 <div className="divider">
                   <hr/>
@@ -53,7 +66,7 @@ class About extends React.Component {
                 <div className="profile">
                   <img className="rounded-circle" src="/app/img/lindsey-profile.jpg" alt="lindsey-cross-profile-luhu-design"/>
                   <div className="spacer"></div>
-                  <h2 className="sub-heading">Lindsey Cross</h2>
+                  <h2 className="heading">Lindsey Cross</h2>
                   <h3 className="sub-heading">Founder and Chief Problem Solver</h3>
                   <div className="spacer"></div>
                   <p className="lead">Lindsey graduated from the University of Southern California with a BS in Aerospace Engineering. While there, she helped to optimize wave dynamics for the Kelly Slater Wave Co and helped develop intelligent prosthetic fingertips for SynTouch, LLC.<br/><br/>
@@ -67,7 +80,8 @@ class About extends React.Component {
                   <ContactButton/>
               </div>
            </div>
-        </div>
+      </div>
+    </div>
     )
   }
 }

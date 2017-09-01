@@ -1,0 +1,13 @@
+@mixin background-cover() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% top;
+  object-fit: cover;
+}
+
+@mixin background-contain() {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% top;
+  object-fit: contain;
+}

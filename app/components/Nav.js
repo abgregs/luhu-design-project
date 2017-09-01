@@ -90,7 +90,6 @@ handleScroll () {
           <NavLink onClick={this.resetToggle} className='navlink item -link' activeClassName='active' to='/blog'>Blog</NavLink>
           <NavLink onClick={this.resetToggle} className='navlink item -link' activeClassName='active' to='/about'>About</NavLink>
           <NavLink onClick={this.resetToggle} className='navlink item -link' activeClassName='active' to='/contact'>Contact</NavLink>
-          {/* <span className="item"><i className="fa fa-search"></i></span> */}
         </nav>
         {/* <!-- Button to toggle the display menu  --> */}
         <button onClick={this.toggleClass} className={[this.state.classOne, this.state.classTwo, "toggle"].join(' ')} data-toggle data-target="#navigation">

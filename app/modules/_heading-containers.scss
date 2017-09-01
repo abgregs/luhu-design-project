@@ -1,5 +1,5 @@
 @import 'colors';
-
+@import 'fonts';
 
 
 //Hero
@@ -14,15 +14,41 @@
 
 @mixin hero-heading-container-tablet {
   padding-top: 54px;
-  width: 80%;
 }
 
 @mixin hero-heading-container-mobile {
-  padding-top: 46px;
+  padding-top: 40px;
 }
 
-//Services
+//Connect
 
-@mixin services-heading-container {
-  margin-bottom: 48px;
+@mixin connect-heading-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 62px;
+  padding-bottom: 40px;
+  color: $white;
+}
+
+@mixin connect-heading-container-tablet {
+  padding-top: 54px;
+  padding-bottom: 32px;
+}
+
+@mixin connect-heading-container-mobile {
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+//Post Component
+
+@mixin post-heading-container {
+  padding-bottom: 56px;
+  font-family: $saira-extra-condensed;
+  letter-spacing: 2px;
+
+}
+
+@mixin post-heading-container-tablet {
+  padding-bottom: 32px;
 }

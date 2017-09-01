@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Hubs from './Hubs'
 import Helmet from 'react-helmet'
-import ContactButton from './ContactButton'
+import LuhuIntroHome from './LuhuIntroHome'
+import HeroMain from './HeroMain'
 
 //Hero home image crop desk/computer image from Steno
 
@@ -41,62 +42,8 @@ class Home extends React.Component {
 
         </Helmet>
 
-
-
-        <div className="jumbotron hero home">
-            <div className="container">
-                <div className="heading-container">
-                  <h1 className="heading">Luhu Design</h1>
-                  <h2 className="sub-heading">
-                    Engineers. Designers.<br/>
-                    Mechanical Problem Solvers.
-                  </h2>
-
-                </div>
-                {/* <div className="icon-wrapper">
-                  <i className="fa fa-cogs" aria-hidden="true"></i>
-                </div> */}
-            <div className="skills">
-              <ul>
-                <li className="col-sm-4"><h3>Physical Product Design</h3></li>
-                <li className="col-sm-4"><h3>Mechanical Design</h3></li>
-                <li className="col-sm-4"><h3>3D CAD Modeling</h3></li>
-                <li className="col-sm-4"><h3>Industrial Design</h3></li>
-                <li className="col-sm-4"><h3>Rapid Prototyping</h3></li>
-                <li className="col-sm-4"><h3>IoT Product Development</h3></li>
-
-              </ul>
-            </div>
-            <div className="callout-container">
-              <div className="callout">
-                {/* <p className="lead">View Our Services</p> */}
-                <div className="button-wrapper hero">
-                <a className="button hero" href="/services" role="button">
-                  <span>View Services</span>
-                </a>
-                {/* <div className="icon-wrapper">
-                  <i className="fa fa-cogs" aria-hidden="true"></i>
-                </div> */}
-
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div className="jumbotron get-in-touch">
-        <div className="container">
-          <div className="content-container">
-            <p className="lead">Luhu Design helps startups and hardware companies achieve their product goals through mechanical engineering and design support. This ranges from industrial and CAD design to mechanical support for your minimal viable product (MVP) to production CAD and drawings.</p>
-                <div className="divider">
-                  <hr/>
-                </div>
-                <p className="lead">Talk to us today to see how we can help solve your mechanical engineering and design challenges.</p>
-                <ContactButton/>
-          </div>
-        </div>
-      </div>
-
+      <HeroMain/>
+      <LuhuIntroHome/>
       <Hubs/>
 
   </div>

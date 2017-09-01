@@ -8,7 +8,8 @@ import Helmet from 'react-helmet'
 // and creates a link to each post
 
 const BlogList = () => (
-  <div className="jumbotron hero bloglist-component">
+
+  <div>
 
     <Helmet>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -16,15 +17,15 @@ const BlogList = () => (
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <base href="/"/>
         <meta charset="utf-8"/>
-        <title>Luhu Blog: Denver Engineering and Mechanical Design Blog | Luhu Design</title>
+        <title>Denver Mechanical Engineering and Design Blog | Luhu Design</title>
         <meta name="description" content="A blog by the engineering and mechanical design problem solvers of Luhu Design located in Denver, Colorado."/>
         <link rel="shortcut icon" type="image/x-icon" href="/app/img/favicon.ico"/>
         <link rel="canonical" href="http://www.luhudesign.com/blog"/>
         <meta property="og:site_name" content="Luhu Design, LLC"/>
-        <meta property="og:title" content="Denver Engineering and Mechanical Design Blog | Luhu Design"/>
+        <meta property="og:title" content="Denver Mechanical Engineering and Design Blog | Luhu Design"/>
         <meta property="og:url" content="http://www.luhudesign.com/blog"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:description" content="A blog by the engineering and mechanical design problem solvers of Luhu Design located in Denver, Colorado."/>
+        <meta property="og:description" content="A blog by the engineering and mechanical design problem solvers at Luhu Design located in Denver, Colorado."/>
         <meta property="og:image" content="/app/img/Luhu-Brandmark-Blue.png?format=1000w"/>
         <meta property="og:image:width" content="488"/>
         <meta property="og:image:height" content="486"/>
@@ -39,6 +40,7 @@ const BlogList = () => (
         <meta name="twitter:card" content="summary"/>
     </Helmet>
 
+  <div className="jumbotron hero bloglist-component">
       <header className="intro-header">
             <div className="row">
                 <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -47,14 +49,15 @@ const BlogList = () => (
                         <div className="divider">
                           <hr/>
                         </div>
-                        <h2 className="sub-heading">A Blog About Mechanical<br/>Design and Engineering</h2>
+                        <h2 className="sub-heading">A Blog About Mechanical<br/>Engineering and Design</h2>
                     </div>
                 </div>
             </div>
         </header>
+      </div>
 
 
-
+<div className="post-list-view">
   <div className="container">
     <div className="row">
         <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 list-container">
@@ -77,6 +80,7 @@ const BlogList = () => (
       </div>
     </div>
   </div>
+</div>
 
 
 )

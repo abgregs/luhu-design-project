@@ -1,20 +1,29 @@
 @import 'lead';
 @import 'fonts';
 @import 'colors';
+
 //Services description content
 
 @mixin services-content-container {
   margin-top: 46px;
 }
 
+@mixin services-content-container-tablet {
+  margin-top: 32px;
+}
+
+@mixin services-content-container-mobile {
+  margin-top: 26px;
+}
+
 //Blog post content
 
 @mixin post-container {
-    padding-top: 90px;
+    padding-top: 60px;
 }
 
 @mixin post-container-tablet {
-    padding-top: 60px;
+    padding-top: 44px;
 }
 
 @mixin post-categories-container {

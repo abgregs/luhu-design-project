@@ -8,7 +8,7 @@ var Helmet = require('react-helmet').default;
 
 const ServicesList = () => (
 
-  <div className="jumbotron hero services-home feature">
+  <div>
     <Helmet>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -39,45 +39,46 @@ const ServicesList = () => (
 
     </Helmet>
 
-      <div className="container">
-          <div className="heading-container">
-            <h1 className="heading">
-              Services
-            </h1>
-            {/* <h2 className="sub-heading">
-            Luhu Design
-            </h2> */}
-          </div>
+      <div className="jumbotron hero services-home">
 
+        <header className="intro-header">
+              <div className="row">
+                  <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                      <div className="heading-container text-center">
+                          <h1 className="heading">Luhu Services</h1>
+                          <div className="divider">
+                            <hr/>
+                          </div>
+                          <h2 className="sub-heading">Mechanical Engineering and Design Services</h2>
+                      </div>
+                  </div>
+              </div>
+          </header>
+
+        </div>
+
+          <div className="service-list-view">
           <div className="row services-list-component text-center">
-
             {ServicesData.all().map(serv => (
-              <div className="col-md-3 col-sm-6 service-listing text-center" key={serv.id}>
-
-{/* IoT use multimeter image
-Rapid prototyping use welding image */}
-
-
+              <div className="col-md-3 col-sm-6 col-xs-6 col-ms-12 service-listing text-center" key={serv.id}>
                   <Link
                    to={`/services/${serv.id}`}
                    className="service-list-item text-center">
-                   <div className="overlay">
-                     <div className="image-wrapper">
-                       <img className="rounded-circle service-list-item-image" src={serv.image} alt={serv.id}/>
-                       <h2 className="text-center">
-                         {serv.title}
-                       </h2>
+                     <div className="overlay">
+                       <div className="image-wrapper col">
+                         <img className="service-list-item-image" src={serv.image} alt={serv.id}/>
+                         <h2 className="text-center">
+                           {serv.title}
+                         </h2>
+                      </div>
                     </div>
-                  </div>
                 </Link>
-
               </div>
-
             ))}
-
          </div>
     </div>
   </div>
+
 
 )
 

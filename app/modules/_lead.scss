@@ -1,8 +1,5 @@
 @import 'fonts';
-
-
-//Open Sans good for default lead font-style
-
+@import 'colors';
 
 //Default
 
@@ -53,4 +50,23 @@
 @mixin lead-jumbotron-regular-tablet {
   @include lead-default-tablet;
   width: 80%;
+}
+
+//Direct Contact Phone/email
+
+@mixin lead-direct-contact {
+  display: inline;
+  font-size: 20px;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  font-family: $saira-condensed;
+
+}
+
+//Form
+
+@mixin lead-form-textarea {
+  font-family: $open-sans;
+  color: $black;
+  font-weight: 400;
 }

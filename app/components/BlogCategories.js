@@ -1,12 +1,11 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import BlogCategoriesHome from './BlogCategoriesHome'
 import BlogCategoryList from './BlogCategoryList'
 
 
 const BlogCategories = () => (
   <Switch>
-    <Route exact path='/blog/categories' component={BlogCategoriesHome}/>
+    {/* <Route exact path='/blog/categories' component={BlogCategoriesHome}/> */}
     <Route path='/blog/categories/:category' component={BlogCategoryList}/>
   </Switch>
 )

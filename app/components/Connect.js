@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Form from './Form'
 
 const Connect = () => (
-  <div className="connect-container">
+  <div className="connect-container text-center">
     <div className="heading-container">
-      <h2 className="heading">Connect with</h2>
-      <h4 className="sub-heading">Luhu Design</h4>
+      <h1 className="heading">Luhu Design</h1>
+      <h2 className="sub-heading">Let's connect!</h2>
     </div>
     <div className="connect-form-container col-sm-8">
       <Form/>

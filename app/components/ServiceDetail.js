@@ -20,7 +20,7 @@ const ServiceDetail = (props) => {
 }
 
   return (
-    <div className="jumbotron hero services" style={style}>
+    <div className="jumbotron hero service-detail" style={style}>
 
       <Helmet>
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -52,43 +52,38 @@ const ServiceDetail = (props) => {
       </Helmet>
 
       <div className="row back-container text-left">
-       <a href={"/services"} className="back-link">
-         <div className="back-link-wrapper">
-           <span><i className="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
-           <h2>Services Home </h2>
-        </div>
-      </a>
-      </div>
-
-            <div className="container">
-
-      <div className="heading-container">
-        <h1 className="heading">
-          {service.title}
-        </h1>
-        <h2 className="sub-heading">
-          {service.subtitle}
-        </h2>
-      </div>
-
-
-
-            <div className='services-content-container'>
-              <p className="lead">{service.leadOne}</p>
-              <p className="lead">{service.leadTwo}</p>
-            </div>
-
-            <div className="callout-container">
-              <div className="callout">
-                <div className="button-wrapper hero">
-                <a className="button hero" href={service.buttonLink} role="button">
-                  <span>{service.buttonText}</span>
-                  </a>
-                </div>
-            </div>
+         <a href={"/services"} className="back-link">
+           <div className="back-link-wrapper">
+             <span><i className="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
+             <h2>Services Home </h2>
           </div>
+        </a>
+      </div>
+
+      <div className="container">
+        <div className="heading-container">
+          <h1 className="heading">
+            {service.title}
+          </h1>
+          <h2 className="sub-heading">
+            {service.subtitle}
+          </h2>
         </div>
-     </div>
+        <div className='services-content-container'>
+          <p className="lead">{service.leadOne}</p>
+          <p className="lead">{service.leadTwo}</p>
+        </div>
+        <div className="callout-container">
+          <div className="callout">
+            <div className="button-wrapper hero">
+            <a className="button hero dark-bg" href={service.buttonLink} role="button">
+              <span>{service.buttonText}</span>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
   )
 }
 

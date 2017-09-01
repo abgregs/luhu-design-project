@@ -27,24 +27,27 @@
 }
 
 @mixin hero-h1-tablet {
-  font-size: 56px;
+  font-size: 48px;
   line-height: 60px;
 }
 
 @mixin hero-h2-tablet {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 36px;
+  padding-top: 16px;
 }
 
 @mixin hero-h1-mobile {
-  font-size: 44px;
-  line-height: 48px;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 2px;
+
 }
 
 @mixin hero-h2-mobile {
-  font-size: 24px;
-  line-height: 32px;
-  padding-top: 18px;
+  font-size: 18px;
+  line-height: 28px;
+  padding-top: 8px;
 }
 
 //Blog Content
@@ -100,7 +103,7 @@
 }
 
 @mixin post-listing-subtitle {
-  font-family: $ubuntu;
+  font-family: $raleway;
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
@@ -108,6 +111,42 @@
   margin-top: 2px;
   margin-bottom: 10px;
 }
+
+
+//Jumbotron content headings
+
+@mixin jumbo-content-h2 {
+  font-family: $saira-condensed;
+  margin-top: 36px;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-shadow: $textshadow-black-light;
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+
+@mixin jumbo-content-h3 {
+  font-family: $saira-extra-condensed;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+@mixin jumbo-content-h2-tablet {
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+@mixin jumbo-content-h3-tablet {
+  font-size: 22px;
+  line-height: 28px;
+}
+
 
 //Skills
 
@@ -126,4 +165,53 @@
 
 @mixin skills-h3-mobile {
   font-size: 22px;
+}
+
+//Services List Items
+
+@mixin service-list-h2 {
+  position: absolute;
+  font-family: $saira-extra-condensed;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 200;
+  text-shadow: $textshadow-black-light;
+  color: #fff;
+  padding: 0 18px;
+  text-shadow: $textshadow-black-light;
+  z-index: 3;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-decoration: none;
+}
+
+@mixin service-list-h2-active {
+  font-weight: 500;
+}
+
+//Connect
+
+@mixin connect-h1 {
+  @include hero-h1;
+}
+
+@mixin connect-h2 {
+  @include hero-h2;
+}
+
+@mixin connect-h1-tablet {
+  @include hero-h1-tablet;
+}
+
+@mixin connect-h2-tablet {
+  @include hero-h2-tablet;
+}
+
+@mixin connect-h1-mobile {
+  @include hero-h1-mobile;
+}
+
+@mixin connect-h2-mobile {
+  @include hero-h2-mobile;
 }

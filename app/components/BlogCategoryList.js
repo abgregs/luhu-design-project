@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 
 const BlogCategoryList = (props) => {
 
-  const imgURL = '/app/img/electronics-chip-cropped.jpg'
+  const imgURL = '/app/img/iot-development-bw.jpg'
 
   const style = {
     backgroundImage: `linear-gradient(rgba(38, 38, 38, 0.6),rgba(38, 38, 38, 0.8)),url(${imgURL})`,
@@ -21,14 +21,7 @@ const BlogCategoryList = (props) => {
 
   const catSlugArray = posts[0].categorySlugs
   const catNameArray = posts[0].categories
-  // var cat = getCat(catSlug)
-  //
-  // var getCat = function(catSlug) {
-  //
-  //   catSlugArray.forEach((category, index) =>
-  //     category === catSlug ? catNameArray[index] : null
-  //   )
-  // }
+
   var cat = catSlug.replace(/-{1,}/g,' ').replace(/(\s{1,}|\b)(\w)/g,
     function(m, space, letter) {
       return space + letter.toUpperCase();
@@ -49,7 +42,7 @@ const BlogCategoryList = (props) => {
 
 
   return (
-    <div className="bloglist-component">
+    <div>
 
       <Helmet>
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -80,6 +73,7 @@ const BlogCategoryList = (props) => {
           <meta name="twitter:card" content="summary"/>
       </Helmet>
 
+    <div className="post-component">
       <header className="intro-header" style={style}>
         <div className="row back-container text-left">
          <a href={"/blog"} className="back-link">
@@ -89,21 +83,25 @@ const BlogCategoryList = (props) => {
           </div>
         </a>
         </div>
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-8 col-md-10">
-                    <div className="categorylist-heading-container">
-                      <h1 className="categorylist-heading">Category: <i>{cat}</i></h1>
-                      <h2 className="categorylist-sub-heading"> {posts.length} {posts.length !== 1 ? 'Results' : 'Result'} for Blog Posts Under This Category </h2>
-                      <p className="post-meta">
-                        {/* Posted by <span className="post-author">{post.author}</span> on {post.date} */}
-                      </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+         <div className="container">
+             <div className="row">
+                 <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <div className="heading-container">
+                       <div className="categorylist-heading-container">
+                         <h1 className="categorylist-heading">Category: <i>{cat}</i></h1>
+                         <h2 className="categorylist-sub-heading"> {posts.length} {posts.length !== 1 ? 'Results' : 'Result'} for Blog Posts Under This Category </h2>
+                         {/* <p className="post-meta">
+                           Posted by <span className="post-author">{post.author}</span> on {post.date}
+                         </p> */}
+                       </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+       </header>
+     </div>
 
+      <div className="post-list-view">
          <div className="container">
            <div className="row">
                <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 list-container">
@@ -125,6 +123,7 @@ const BlogCategoryList = (props) => {
                </div>
              </div>
            </div>
+        </div>
      </div>
   )
 }

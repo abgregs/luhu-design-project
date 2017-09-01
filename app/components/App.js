@@ -9,6 +9,7 @@ import ScrollToTop from './ScrollToTop'
 import Nav from './Nav'
 import { Route, Switch } from 'react-router-dom'
 import FooterOffset from './FooterOffset'
+import NotFound from './NotFound'
 
 class App extends React.Component {
 
@@ -24,9 +25,7 @@ class App extends React.Component {
               <Route path='/blog' component={Blog} />
               <Route path='/about' component={About} />
               <Route path='/contact' component={Contact} />
-              <Route render={function () {
-                return <p>Page Not Found</p>
-              }} />
+              <Route path='*' component={NotFound} />
             </Switch>
           </div>
           <FooterOffset/>
