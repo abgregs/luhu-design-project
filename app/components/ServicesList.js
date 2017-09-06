@@ -65,7 +65,7 @@ const ServicesList = () => (
                    to={`/services/${serv.id}`}
                    className="service-list-item text-center">
                      <div className="overlay">
-                       <div className="image-wrapper col">
+                       <div className="image-wrapper col text-center">
                          <img className="service-list-item-image" src={serv.image} alt={serv.id}/>
                          <h2 className="text-center">
                            {serv.title}

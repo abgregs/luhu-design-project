@@ -14,7 +14,9 @@ var config = {
       { test: /\.(js)$/, use: 'babel-loader' },
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
       { test: /\.scss$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ]},
-      { test: /\.(jpe?g|svg|xml|ico)$/i, use: 'file-loader' }
+      { test: /\.(jpg|svg|png|ico)$/, loader: 'file-loader', options:
+        {name: '[path][name].[ext]'}
+      }
     ]
   },
   devServer: {

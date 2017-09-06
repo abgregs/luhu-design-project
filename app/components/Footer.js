@@ -51,7 +51,7 @@ function Footer () {
         <div className="brand website-credit">
           <ul>
             <li>
-              Website created<br/>by <a href="https://www.linkedin.com/in/austin-gregersen-a4b77440/" target='_blank'>Austin Gregersen</a>
+              Website created<br/>by <a href="https://abgregs.github.io/frontend-nanodegree-resume-project/" target='_blank'>Austin Gregersen</a>
             </li>
           </ul>
         </div>

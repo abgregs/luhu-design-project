@@ -2,11 +2,12 @@ import React from 'react'
 import BlogData from '../BlogData'
 import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
+require('file-loader!.././img/rapid-prototyping-bw.jpg');
 
 
 const BlogCategoryList = (props) => {
 
-  const imgURL = '/app/img/iot-development-bw.jpg'
+  const imgURL = '/app/img/rapid-prototyping-bw.jpg';
 
   const style = {
     backgroundImage: `linear-gradient(rgba(38, 38, 38, 0.6),rgba(38, 38, 38, 0.8)),url(${imgURL})`,

@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import ContactButton from './ContactButton'
+require('file-loader!.././img/lindsey-profile.jpg')
 
 class About extends React.Component {
   render() {
@@ -53,7 +54,7 @@ class About extends React.Component {
                     </div>
                 </div>
             </header>
-            
+
           </div>
 
     <div className="jumbotron white-bg about">
@@ -64,7 +65,7 @@ class About extends React.Component {
                   <hr/>
                 </div>
                 <div className="profile">
-                  <img className="rounded-circle" src="/app/img/lindsey-profile.jpg" alt="lindsey-cross-profile-luhu-design"/>
+                  <img className="rounded-circle" src="./app/img/lindsey-profile.jpg" alt="lindsey-cross-profile-luhu-design"/>
                   <div className="spacer"></div>
                   <h2 className="heading">Lindsey Cross</h2>
                   <h3 className="sub-heading">Founder and Chief Problem Solver</h3>
